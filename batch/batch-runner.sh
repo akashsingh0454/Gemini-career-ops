@@ -119,8 +119,8 @@ check_prerequisites() {
     exit 1
   fi
 
-  if ! command -v claude &>/dev/null; then
-    echo "ERROR: 'claude' CLI not found in PATH."
+  if ! command -v npm &>/dev/null; then
+    echo "ERROR: 'npm' CLI not found in PATH."
     exit 1
   fi
 
@@ -350,12 +350,10 @@ process_offer() {
     -e "s|{{ID}}|${esc_id}|g" \
     "$PROMPT_FILE" > "$resolved_prompt"
 
-  # Launch claude -p worker (uses default model from Claude Max subscription)
+  # Launch gemini-ops worker
   local exit_code=0
-  claude -p \
-    --dangerously-skip-permissions \
-    --append-system-prompt-file "$resolved_prompt" \
-    "$prompt" \
+  npm run gemini-ops -- batch \
+    "$resolved_prompt: $prompt" \
     > "$log_file" 2>&1 || exit_code=$?
 
   # Cleanup resolved prompt

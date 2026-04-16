@@ -1,19 +1,21 @@
-# Career-Ops
+﻿> **Note: This is a Gemini-adapted fork.**
+> The original "Career-Ops" system was created by **Santiago Fernández de Valderrama ([santifer.io](https://santifer.io))**. All credit for the framework, prompts, and pipeline design goes to him. You can find the original repository here: [santifer/career-ops](https://github.com/santifer/career-ops).
+# Gemini Career-Ops
 
-[English](README.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [한국어](README.ko-KR.md) | [日本語](README.ja.md) | [Русский](README.ru.md) | [繁體中文](README.zh-TW.md)
+[English](README.md) | [EspaÃ±ol](README.es.md) | [PortuguÃªs (Brasil)](README.pt-BR.md) | [í•œêµ­ì–´](README.ko-KR.md) | [æ—¥æœ¬èªž](README.ja.md) | [Ð ÑƒÑÑÐºÐ¸Ð¹](README.ru.md) | [ç¹é«”ä¸­æ–‡](README.zh-TW.md)
 
 <p align="center">
-  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops — 多代理求職系統" width="800"></a>
+  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops â€” å¤šä»£ç†æ±‚è·ç³»çµ±" width="800"></a>
 </p>
 
 <p align="center">
-  <em>我花了好幾個月用最費力的方式找工作。所以我打造了一個當初就希望能擁有的系統。</em><br>
-  企業用 AI 篩選候選人。<strong>我把 AI 交給候選人，讓他們來<em>挑選</em>企業。</strong><br>
-  <em>現在，它開源了。</em>
+  <em>æˆ‘èŠ±äº†å¥½å¹¾å€‹æœˆç”¨æœ€è²»åŠ›çš„æ–¹å¼æ‰¾å·¥ä½œã€‚æ‰€ä»¥æˆ‘æ‰“é€ äº†ä¸€å€‹ç•¶åˆå°±å¸Œæœ›èƒ½æ“æœ‰çš„ç³»çµ±ã€‚</em><br>
+  ä¼æ¥­ç”¨ AI ç¯©é¸å€™é¸äººã€‚<strong>æˆ‘æŠŠ AI äº¤çµ¦å€™é¸äººï¼Œè®“ä»–å€‘ä¾†<em>æŒ‘é¸</em>ä¼æ¥­ã€‚</strong><br>
+  <em>ç¾åœ¨ï¼Œå®ƒé–‹æºäº†ã€‚</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
+  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Gemini Agent">
   <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
   <img src="https://img.shields.io/badge/Codex_(soon)-6B7280?style=flat&logo=openai&logoColor=white" alt="Codex">
   <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
@@ -35,142 +37,142 @@
 ---
 
 <p align="center">
-  <img src="docs/demo.gif" alt="Career-Ops 示範" width="800">
+  <img src="docs/demo.gif" alt="Career-Ops ç¤ºç¯„" width="800">
 </p>
 
-<p align="center"><strong>評估超過 740 份職缺 · 生成超過 100 份個人化履歷 · 成功獲得理想職位</strong></p>
+<p align="center"><strong>è©•ä¼°è¶…éŽ 740 ä»½è·ç¼º Â· ç”Ÿæˆè¶…éŽ 100 ä»½å€‹äººåŒ–å±¥æ­· Â· æˆåŠŸç²å¾—ç†æƒ³è·ä½</strong></p>
 
-<p align="center"><a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/加入社群-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a></p>
+<p align="center"><a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/åŠ å…¥ç¤¾ç¾¤-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a></p>
 
-## 這是什麼
+## é€™æ˜¯ä»€éº¼
 
-Career-Ops 能將任何 AI 程式碼 CLI 轉化為完整的求職指揮中心。不再需要手動用試算表追蹤應徵紀錄，而是獲得一個 AI 驅動的管道，能夠：
+Career-Ops èƒ½å°‡ä»»ä½• AI ç¨‹å¼ç¢¼ CLI è½‰åŒ–ç‚ºå®Œæ•´çš„æ±‚è·æŒ‡æ®ä¸­å¿ƒã€‚ä¸å†éœ€è¦æ‰‹å‹•ç”¨è©¦ç®—è¡¨è¿½è¹¤æ‡‰å¾µç´€éŒ„ï¼Œè€Œæ˜¯ç²å¾—ä¸€å€‹ AI é©…å‹•çš„ç®¡é“ï¼Œèƒ½å¤ ï¼š
 
-- **評估職缺** — 結構化的 A-F 評分系統（10 個加權評估維度）
-- **生成客製化 PDF** — 針對每份職缺描述進行 ATS 最佳化的履歷
-- **自動掃描求職平台**（Greenhouse、Ashby、Lever、企業頁面）
-- **批次處理** — 透過子代理並行評估 10 份以上的職缺
-- **集中管理一切** — 單一資料來源，附完整性檢查
+- **è©•ä¼°è·ç¼º** â€” çµæ§‹åŒ–çš„ A-F è©•åˆ†ç³»çµ±ï¼ˆ10 å€‹åŠ æ¬Šè©•ä¼°ç¶­åº¦ï¼‰
+- **ç”Ÿæˆå®¢è£½åŒ– PDF** â€” é‡å°æ¯ä»½è·ç¼ºæè¿°é€²è¡Œ ATS æœ€ä½³åŒ–çš„å±¥æ­·
+- **è‡ªå‹•æŽƒææ±‚è·å¹³å°**ï¼ˆGreenhouseã€Ashbyã€Leverã€ä¼æ¥­é é¢ï¼‰
+- **æ‰¹æ¬¡è™•ç†** â€” é€éŽå­ä»£ç†ä¸¦è¡Œè©•ä¼° 10 ä»½ä»¥ä¸Šçš„è·ç¼º
+- **é›†ä¸­ç®¡ç†ä¸€åˆ‡** â€” å–®ä¸€è³‡æ–™ä¾†æºï¼Œé™„å®Œæ•´æ€§æª¢æŸ¥
 
-> **重要：這不是廣撒網的工具。** career-ops 是一個篩選器 — 它幫助你從數百份職缺中找出真正值得投入的少數機會。本系統強烈建議不要應徵評分低於 4.0/5 的職缺。你的時間很寶貴，招募人員的時間也是。送出前務必仔細審閱。
+> **é‡è¦ï¼šé€™ä¸æ˜¯å»£æ’’ç¶²çš„å·¥å…·ã€‚** career-ops æ˜¯ä¸€å€‹ç¯©é¸å™¨ â€” å®ƒå¹«åŠ©ä½ å¾žæ•¸ç™¾ä»½è·ç¼ºä¸­æ‰¾å‡ºçœŸæ­£å€¼å¾—æŠ•å…¥çš„å°‘æ•¸æ©Ÿæœƒã€‚æœ¬ç³»çµ±å¼·çƒˆå»ºè­°ä¸è¦æ‡‰å¾µè©•åˆ†ä½Žæ–¼ 4.0/5 çš„è·ç¼ºã€‚ä½ çš„æ™‚é–“å¾ˆå¯¶è²´ï¼Œæ‹›å‹Ÿäººå“¡çš„æ™‚é–“ä¹Ÿæ˜¯ã€‚é€å‡ºå‰å‹™å¿…ä»”ç´°å¯©é–±ã€‚
 
-career-ops 具有代理能力：Claude Code 透過 Playwright 瀏覽求職頁面，藉由推理你的履歷與職缺描述的契合度（而非關鍵字比對）進行評估，並針對每份職缺調整你的履歷。
+career-ops å…·æœ‰ä»£ç†èƒ½åŠ›ï¼šGemini Agent é€éŽ Playwright ç€è¦½æ±‚è·é é¢ï¼Œè—‰ç”±æŽ¨ç†ä½ çš„å±¥æ­·èˆ‡è·ç¼ºæè¿°çš„å¥‘åˆåº¦ï¼ˆè€Œéžé—œéµå­—æ¯”å°ï¼‰é€²è¡Œè©•ä¼°ï¼Œä¸¦é‡å°æ¯ä»½è·ç¼ºèª¿æ•´ä½ çš„å±¥æ­·ã€‚
 
-> **注意：最初幾次評估的品質可能不盡理想。** 因為系統還不了解你。請提供更多背景資訊 — 你的履歷、職涯故事、成就佐證、個人偏好、你的專長以及希望避免的事情。你餵給它的資訊越多，它就越準確。把它當作招募新人的招募顧問：第一週需要學習認識你，之後就會成為不可或缺的夥伴。
+> **æ³¨æ„ï¼šæœ€åˆå¹¾æ¬¡è©•ä¼°çš„å“è³ªå¯èƒ½ä¸ç›¡ç†æƒ³ã€‚** å› ç‚ºç³»çµ±é‚„ä¸äº†è§£ä½ ã€‚è«‹æä¾›æ›´å¤šèƒŒæ™¯è³‡è¨Š â€” ä½ çš„å±¥æ­·ã€è·æ¶¯æ•…äº‹ã€æˆå°±ä½è­‰ã€å€‹äººåå¥½ã€ä½ çš„å°ˆé•·ä»¥åŠå¸Œæœ›é¿å…çš„äº‹æƒ…ã€‚ä½ é¤µçµ¦å®ƒçš„è³‡è¨Šè¶Šå¤šï¼Œå®ƒå°±è¶Šæº–ç¢ºã€‚æŠŠå®ƒç•¶ä½œæ‹›å‹Ÿæ–°äººçš„æ‹›å‹Ÿé¡§å•ï¼šç¬¬ä¸€é€±éœ€è¦å­¸ç¿’èªè­˜ä½ ï¼Œä¹‹å¾Œå°±æœƒæˆç‚ºä¸å¯æˆ–ç¼ºçš„å¤¥ä¼´ã€‚
 
-這個系統由一位親身使用它評估超過 740 份職缺、生成超過 100 份客製化履歷、並成功獲得 Head of Applied AI 職位的人所打造。[閱讀完整案例研究](https://santifer.io/career-ops-system)。
+é€™å€‹ç³»çµ±ç”±ä¸€ä½è¦ªèº«ä½¿ç”¨å®ƒè©•ä¼°è¶…éŽ 740 ä»½è·ç¼ºã€ç”Ÿæˆè¶…éŽ 100 ä»½å®¢è£½åŒ–å±¥æ­·ã€ä¸¦æˆåŠŸç²å¾— Head of Applied AI è·ä½çš„äººæ‰€æ‰“é€ ã€‚[é–±è®€å®Œæ•´æ¡ˆä¾‹ç ”ç©¶](https://santifer.io/career-ops-system)ã€‚
 
-## 功能特色
+## åŠŸèƒ½ç‰¹è‰²
 
-| 功能 | 說明 |
+| åŠŸèƒ½ | èªªæ˜Ž |
 |------|------|
-| **自動管道** | 貼上 URL，自動完成評估 + PDF + 追蹤紀錄 |
-| **6 區塊評估** | 職位摘要、履歷匹配、職級策略、薪酬調查、個人化、面試準備（STAR+R）|
-| **面試故事庫** | 跨評估累積 STAR+Reflection 故事 — 能回答任何行為面試問題的 5-10 個核心故事 |
-| **薪資談判腳本** | 薪資談判框架、地區薪資折扣反駁話術、競爭 Offer 運用策略 |
-| **ATS PDF 生成** | 注入關鍵字的履歷，採用 Space Grotesk + DM Sans 設計 |
-| **平台掃描器** | 預設超過 45 家企業（Anthropic、OpenAI、ElevenLabs、Retool、n8n...）+ 跨 Ashby、Greenhouse、Lever、Wellfound 的自訂查詢 |
-| **批次處理** | 使用 `claude -p` 工作器並行評估 |
-| **儀表板 TUI** | 在終端機 UI 中瀏覽、篩選及排序你的求職管道 |
-| **人機協作** | AI 負責評估與建議，你負責決策與行動。系統絕不自動送出應徵 — 最終決定永遠在你手上 |
-| **管道完整性** | 自動合併、去重、狀態正規化、健康檢查 |
+| **è‡ªå‹•ç®¡é“** | è²¼ä¸Š URLï¼Œè‡ªå‹•å®Œæˆè©•ä¼° + PDF + è¿½è¹¤ç´€éŒ„ |
+| **6 å€å¡Šè©•ä¼°** | è·ä½æ‘˜è¦ã€å±¥æ­·åŒ¹é…ã€è·ç´šç­–ç•¥ã€è–ªé…¬èª¿æŸ¥ã€å€‹äººåŒ–ã€é¢è©¦æº–å‚™ï¼ˆSTAR+Rï¼‰|
+| **é¢è©¦æ•…äº‹åº«** | è·¨è©•ä¼°ç´¯ç© STAR+Reflection æ•…äº‹ â€” èƒ½å›žç­”ä»»ä½•è¡Œç‚ºé¢è©¦å•é¡Œçš„ 5-10 å€‹æ ¸å¿ƒæ•…äº‹ |
+| **è–ªè³‡è«‡åˆ¤è…³æœ¬** | è–ªè³‡è«‡åˆ¤æ¡†æž¶ã€åœ°å€è–ªè³‡æŠ˜æ‰£åé§è©±è¡“ã€ç«¶çˆ­ Offer é‹ç”¨ç­–ç•¥ |
+| **ATS PDF ç”Ÿæˆ** | æ³¨å…¥é—œéµå­—çš„å±¥æ­·ï¼ŒæŽ¡ç”¨ Space Grotesk + DM Sans è¨­è¨ˆ |
+| **å¹³å°æŽƒæå™¨** | é è¨­è¶…éŽ 45 å®¶ä¼æ¥­ï¼ˆAnthropicã€OpenAIã€ElevenLabsã€Retoolã€n8n...ï¼‰+ è·¨ Ashbyã€Greenhouseã€Leverã€Wellfound çš„è‡ªè¨‚æŸ¥è©¢ |
+| **æ‰¹æ¬¡è™•ç†** | ä½¿ç”¨ `npm run gemini-ops --` å·¥ä½œå™¨ä¸¦è¡Œè©•ä¼° |
+| **å„€è¡¨æ¿ TUI** | åœ¨çµ‚ç«¯æ©Ÿ UI ä¸­ç€è¦½ã€ç¯©é¸åŠæŽ’åºä½ çš„æ±‚è·ç®¡é“ |
+| **äººæ©Ÿå”ä½œ** | AI è² è²¬è©•ä¼°èˆ‡å»ºè­°ï¼Œä½ è² è²¬æ±ºç­–èˆ‡è¡Œå‹•ã€‚ç³»çµ±çµ•ä¸è‡ªå‹•é€å‡ºæ‡‰å¾µ â€” æœ€çµ‚æ±ºå®šæ°¸é åœ¨ä½ æ‰‹ä¸Š |
+| **ç®¡é“å®Œæ•´æ€§** | è‡ªå‹•åˆä½µã€åŽ»é‡ã€ç‹€æ…‹æ­£è¦åŒ–ã€å¥åº·æª¢æŸ¥ |
 
-## 快速開始
+## å¿«é€Ÿé–‹å§‹
 
 ```bash
-# 1. 複製並安裝
+# 1. è¤‡è£½ä¸¦å®‰è£
 git clone https://github.com/santifer/career-ops.git
 cd career-ops && npm install
-npx playwright install chromium   # PDF 生成所需
+npx playwright install chromium   # PDF ç”Ÿæˆæ‰€éœ€
 
-# 2. 檢查設定
-npm run doctor                     # 驗證所有必要條件
+# 2. æª¢æŸ¥è¨­å®š
+npm run doctor                     # é©—è­‰æ‰€æœ‰å¿…è¦æ¢ä»¶
 
-# 3. 設定檔
-cp config/profile.example.yml config/profile.yml  # 填入你的個人資訊
-cp templates/portals.example.yml portals.yml       # 自訂目標企業
+# 3. è¨­å®šæª”
+cp config/profile.example.yml config/profile.yml  # å¡«å…¥ä½ çš„å€‹äººè³‡è¨Š
+cp templates/portals.example.yml portals.yml       # è‡ªè¨‚ç›®æ¨™ä¼æ¥­
 
-# 4. 加入你的履歷
-# 在專案根目錄建立 cv.md，以 Markdown 格式撰寫你的履歷
+# 4. åŠ å…¥ä½ çš„å±¥æ­·
+# åœ¨å°ˆæ¡ˆæ ¹ç›®éŒ„å»ºç«‹ cv.mdï¼Œä»¥ Markdown æ ¼å¼æ’°å¯«ä½ çš„å±¥æ­·
 
-# 5. 透過 Claude 個人化設定
-claude   # 在此目錄開啟 Claude Code
+# 5. é€éŽ Claude å€‹äººåŒ–è¨­å®š
+claude   # åœ¨æ­¤ç›®éŒ„é–‹å•Ÿ Gemini Agent
 
-# 然後請 Claude 幫你調整系統：
-# 「把職位類型改成後端工程師相關職缺」
-# 「把模式翻譯成繁體中文」
-# 「把這 5 家公司加入 portals.yml」
-# 「用我貼的這份履歷更新我的個人檔案」
+# ç„¶å¾Œè«‹ Claude å¹«ä½ èª¿æ•´ç³»çµ±ï¼š
+# ã€ŒæŠŠè·ä½é¡žåž‹æ”¹æˆå¾Œç«¯å·¥ç¨‹å¸«ç›¸é—œè·ç¼ºã€
+# ã€ŒæŠŠæ¨¡å¼ç¿»è­¯æˆç¹é«”ä¸­æ–‡ã€
+# ã€ŒæŠŠé€™ 5 å®¶å…¬å¸åŠ å…¥ portals.ymlã€
+# ã€Œç”¨æˆ‘è²¼çš„é€™ä»½å±¥æ­·æ›´æ–°æˆ‘çš„å€‹äººæª”æ¡ˆã€
 
-# 6. 開始使用
-# 貼上職缺 URL 或執行 /career-ops
+# 6. é–‹å§‹ä½¿ç”¨
+# è²¼ä¸Šè·ç¼º URL æˆ–åŸ·è¡Œ /career-ops
 ```
 
-> **這個系統設計上就是讓 Claude 來客製化的。** 模式、職位類型、評分權重、談判腳本 — 直接告訴 Claude 要修改什麼，它就會動手。Claude 讀取的是它自己使用的相同檔案，所以它確切知道要編輯哪裡。
+> **é€™å€‹ç³»çµ±è¨­è¨ˆä¸Šå°±æ˜¯è®“ Claude ä¾†å®¢è£½åŒ–çš„ã€‚** æ¨¡å¼ã€è·ä½é¡žåž‹ã€è©•åˆ†æ¬Šé‡ã€è«‡åˆ¤è…³æœ¬ â€” ç›´æŽ¥å‘Šè¨´ Claude è¦ä¿®æ”¹ä»€éº¼ï¼Œå®ƒå°±æœƒå‹•æ‰‹ã€‚Claude è®€å–çš„æ˜¯å®ƒè‡ªå·±ä½¿ç”¨çš„ç›¸åŒæª”æ¡ˆï¼Œæ‰€ä»¥å®ƒç¢ºåˆ‡çŸ¥é“è¦ç·¨è¼¯å“ªè£¡ã€‚
 
-完整設定指南請參閱 [docs/SETUP.md](docs/SETUP.md)。
+å®Œæ•´è¨­å®šæŒ‡å—è«‹åƒé–± [docs/SETUP.md](docs/SETUP.md)ã€‚
 
-## 使用方式
+## ä½¿ç”¨æ–¹å¼
 
-career-ops 是一個具有多種模式的單一斜線指令：
-
-```
-/career-ops                → 顯示所有可用指令
-/career-ops {貼上職缺描述}  → 完整自動管道（評估 + PDF + 追蹤）
-/career-ops scan           → 掃描平台尋找新職缺
-/career-ops pdf            → 生成 ATS 最佳化履歷
-/career-ops batch          → 批次評估多份職缺
-/career-ops tracker        → 查看應徵狀態
-/career-ops apply          → AI 協助填寫應徵表單
-/career-ops pipeline       → 處理待辦 URL
-/career-ops contacto       → LinkedIn 外寄訊息
-/career-ops deep           → 深度公司研究
-/career-ops training       → 評估課程/證照
-/career-ops project        → 評估作品集專案
-```
-
-或者直接貼上職缺 URL 或描述 — career-ops 會自動偵測並執行完整管道。
-
-## 運作原理
+career-ops æ˜¯ä¸€å€‹å…·æœ‰å¤šç¨®æ¨¡å¼çš„å–®ä¸€æ–œç·šæŒ‡ä»¤ï¼š
 
 ```
-貼上職缺 URL 或描述
-        │
-        ▼
-┌──────────────────┐
-│  職位類型        │  分類：LLMOps / Agentic / PM / SA / FDE / Transformation
-│  偵測            │
-└────────┬─────────┘
-         │
-┌────────▼─────────┐
-│  A-F 評估        │  匹配度、缺口、薪酬調查、STAR 故事
-│  （讀取 cv.md）  │
-└────────┬─────────┘
-         │
-    ┌────┼────┐
-    ▼    ▼    ▼
-  報告  PDF  追蹤
+/career-ops                â†’ é¡¯ç¤ºæ‰€æœ‰å¯ç”¨æŒ‡ä»¤
+/career-ops {è²¼ä¸Šè·ç¼ºæè¿°}  â†’ å®Œæ•´è‡ªå‹•ç®¡é“ï¼ˆè©•ä¼° + PDF + è¿½è¹¤ï¼‰
+/career-ops scan           â†’ æŽƒæå¹³å°å°‹æ‰¾æ–°è·ç¼º
+/career-ops pdf            â†’ ç”Ÿæˆ ATS æœ€ä½³åŒ–å±¥æ­·
+/career-ops batch          â†’ æ‰¹æ¬¡è©•ä¼°å¤šä»½è·ç¼º
+/career-ops tracker        â†’ æŸ¥çœ‹æ‡‰å¾µç‹€æ…‹
+/career-ops apply          â†’ AI å”åŠ©å¡«å¯«æ‡‰å¾µè¡¨å–®
+/career-ops pipeline       â†’ è™•ç†å¾…è¾¦ URL
+/career-ops contacto       â†’ LinkedIn å¤–å¯„è¨Šæ¯
+/career-ops deep           â†’ æ·±åº¦å…¬å¸ç ”ç©¶
+/career-ops training       â†’ è©•ä¼°èª²ç¨‹/è­‰ç…§
+/career-ops project        â†’ è©•ä¼°ä½œå“é›†å°ˆæ¡ˆ
+```
+
+æˆ–è€…ç›´æŽ¥è²¼ä¸Šè·ç¼º URL æˆ–æè¿° â€” career-ops æœƒè‡ªå‹•åµæ¸¬ä¸¦åŸ·è¡Œå®Œæ•´ç®¡é“ã€‚
+
+## é‹ä½œåŽŸç†
+
+```
+è²¼ä¸Šè·ç¼º URL æˆ–æè¿°
+        â”‚
+        â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  è·ä½é¡žåž‹        â”‚  åˆ†é¡žï¼šLLMOps / Agentic / PM / SA / FDE / Transformation
+â”‚  åµæ¸¬            â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+         â”‚
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  A-F è©•ä¼°        â”‚  åŒ¹é…åº¦ã€ç¼ºå£ã€è–ªé…¬èª¿æŸ¥ã€STAR æ•…äº‹
+â”‚  ï¼ˆè®€å– cv.mdï¼‰  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+         â”‚
+    â”Œâ”€â”€â”€â”€â”¼â”€â”€â”€â”€â”
+    â–¼    â–¼    â–¼
+  å ±å‘Š  PDF  è¿½è¹¤
   .md  .pdf  .tsv
 ```
 
-## 預設掃描平台
+## é è¨­æŽƒæå¹³å°
 
-掃描器預設了超過 **45 家企業**及跨主要求職板的 **19 個搜尋查詢**。將 `templates/portals.example.yml` 複製為 `portals.yml` 並自行新增：
+æŽƒæå™¨é è¨­äº†è¶…éŽ **45 å®¶ä¼æ¥­**åŠè·¨ä¸»è¦æ±‚è·æ¿çš„ **19 å€‹æœå°‹æŸ¥è©¢**ã€‚å°‡ `templates/portals.example.yml` è¤‡è£½ç‚º `portals.yml` ä¸¦è‡ªè¡Œæ–°å¢žï¼š
 
-**AI 實驗室：** Anthropic、OpenAI、Mistral、Cohere、LangChain、Pinecone
-**語音 AI：** ElevenLabs、PolyAI、Parloa、Hume AI、Deepgram、Vapi、Bland AI
-**AI 平台：** Retool、Airtable、Vercel、Temporal、Glean、Arize AI
-**客服中心：** Ada、LivePerson、Sierra、Decagon、Talkdesk、Genesys
-**企業級：** Salesforce、Twilio、Gong、Dialpad
-**LLMOps：** Langfuse、Weights & Biases、Lindy、Cognigy、Speechmatics
-**自動化：** n8n、Zapier、Make.com
-**歐洲：** Factorial、Attio、Tinybird、Clarity AI、Travelperk
+**AI å¯¦é©—å®¤ï¼š** Anthropicã€OpenAIã€Mistralã€Cohereã€LangChainã€Pinecone
+**èªžéŸ³ AIï¼š** ElevenLabsã€PolyAIã€Parloaã€Hume AIã€Deepgramã€Vapiã€Bland AI
+**AI å¹³å°ï¼š** Retoolã€Airtableã€Vercelã€Temporalã€Gleanã€Arize AI
+**å®¢æœä¸­å¿ƒï¼š** Adaã€LivePersonã€Sierraã€Decagonã€Talkdeskã€Genesys
+**ä¼æ¥­ç´šï¼š** Salesforceã€Twilioã€Gongã€Dialpad
+**LLMOpsï¼š** Langfuseã€Weights & Biasesã€Lindyã€Cognigyã€Speechmatics
+**è‡ªå‹•åŒ–ï¼š** n8nã€Zapierã€Make.com
+**æ­æ´²ï¼š** Factorialã€Attioã€Tinybirdã€Clarity AIã€Travelperk
 
-**搜尋的求職平台：** Ashby、Greenhouse、Lever、Wellfound、Workable、RemoteFront
+**æœå°‹çš„æ±‚è·å¹³å°ï¼š** Ashbyã€Greenhouseã€Leverã€Wellfoundã€Workableã€RemoteFront
 
-## 儀表板 TUI
+## å„€è¡¨æ¿ TUI
 
-內建的終端機儀表板讓你以視覺化方式瀏覽求職管道：
+å…§å»ºçš„çµ‚ç«¯æ©Ÿå„€è¡¨æ¿è®“ä½ ä»¥è¦–è¦ºåŒ–æ–¹å¼ç€è¦½æ±‚è·ç®¡é“ï¼š
 
 ```bash
 cd dashboard
@@ -178,67 +180,67 @@ go build -o career-dashboard .
 ./career-dashboard --path ..
 ```
 
-功能：6 個篩選分頁、4 種排序模式、分組/平鋪檢視、延遲載入預覽、內嵌狀態修改。
+åŠŸèƒ½ï¼š6 å€‹ç¯©é¸åˆ†é ã€4 ç¨®æŽ’åºæ¨¡å¼ã€åˆ†çµ„/å¹³é‹ªæª¢è¦–ã€å»¶é²è¼‰å…¥é è¦½ã€å…§åµŒç‹€æ…‹ä¿®æ”¹ã€‚
 
-## 專案結構
+## å°ˆæ¡ˆçµæ§‹
 
 ```
 career-ops/
-├── CLAUDE.md                    # 代理指令
-├── cv.md                        # 你的履歷（需自行建立）
-├── article-digest.md            # 你的成就佐證（選填）
-├── config/
-│   └── profile.example.yml      # 個人檔案範本
-├── modes/                       # 14 個技能模式
-│   ├── _shared.md               # 共用情境（在此自訂）
-│   ├── oferta.md                # 單一職缺評估
-│   ├── pdf.md                   # PDF 生成
-│   ├── scan.md                  # 平台掃描器
-│   ├── batch.md                 # 批次處理
-│   └── ...
-├── templates/
-│   ├── cv-template.html         # ATS 最佳化履歷範本
-│   ├── portals.example.yml      # 掃描器設定範本
-│   └── states.yml               # 標準狀態清單
-├── batch/
-│   ├── batch-prompt.md          # 自包含工作器提示
-│   └── batch-runner.sh          # 協調器腳本
-├── dashboard/                   # Go TUI 管道檢視器
-├── data/                        # 你的追蹤資料（已 gitignore）
-├── reports/                     # 評估報告（已 gitignore）
-├── output/                      # 生成的 PDF（已 gitignore）
-├── fonts/                       # Space Grotesk + DM Sans
-├── docs/                        # 設定、自訂化、架構說明
-└── examples/                    # 範例履歷、報告、成就佐證
+â”œâ”€â”€ CLAUDE.md                    # ä»£ç†æŒ‡ä»¤
+â”œâ”€â”€ cv.md                        # ä½ çš„å±¥æ­·ï¼ˆéœ€è‡ªè¡Œå»ºç«‹ï¼‰
+â”œâ”€â”€ article-digest.md            # ä½ çš„æˆå°±ä½è­‰ï¼ˆé¸å¡«ï¼‰
+â”œâ”€â”€ config/
+â”‚   â””â”€â”€ profile.example.yml      # å€‹äººæª”æ¡ˆç¯„æœ¬
+â”œâ”€â”€ modes/                       # 14 å€‹æŠ€èƒ½æ¨¡å¼
+â”‚   â”œâ”€â”€ _shared.md               # å…±ç”¨æƒ…å¢ƒï¼ˆåœ¨æ­¤è‡ªè¨‚ï¼‰
+â”‚   â”œâ”€â”€ oferta.md                # å–®ä¸€è·ç¼ºè©•ä¼°
+â”‚   â”œâ”€â”€ pdf.md                   # PDF ç”Ÿæˆ
+â”‚   â”œâ”€â”€ scan.md                  # å¹³å°æŽƒæå™¨
+â”‚   â”œâ”€â”€ batch.md                 # æ‰¹æ¬¡è™•ç†
+â”‚   â””â”€â”€ ...
+â”œâ”€â”€ templates/
+â”‚   â”œâ”€â”€ cv-template.html         # ATS æœ€ä½³åŒ–å±¥æ­·ç¯„æœ¬
+â”‚   â”œâ”€â”€ portals.example.yml      # æŽƒæå™¨è¨­å®šç¯„æœ¬
+â”‚   â””â”€â”€ states.yml               # æ¨™æº–ç‹€æ…‹æ¸…å–®
+â”œâ”€â”€ batch/
+â”‚   â”œâ”€â”€ batch-prompt.md          # è‡ªåŒ…å«å·¥ä½œå™¨æç¤º
+â”‚   â””â”€â”€ batch-runner.sh          # å”èª¿å™¨è…³æœ¬
+â”œâ”€â”€ dashboard/                   # Go TUI ç®¡é“æª¢è¦–å™¨
+â”œâ”€â”€ data/                        # ä½ çš„è¿½è¹¤è³‡æ–™ï¼ˆå·² gitignoreï¼‰
+â”œâ”€â”€ reports/                     # è©•ä¼°å ±å‘Šï¼ˆå·² gitignoreï¼‰
+â”œâ”€â”€ output/                      # ç”Ÿæˆçš„ PDFï¼ˆå·² gitignoreï¼‰
+â”œâ”€â”€ fonts/                       # Space Grotesk + DM Sans
+â”œâ”€â”€ docs/                        # è¨­å®šã€è‡ªè¨‚åŒ–ã€æž¶æ§‹èªªæ˜Ž
+â””â”€â”€ examples/                    # ç¯„ä¾‹å±¥æ­·ã€å ±å‘Šã€æˆå°±ä½è­‰
 ```
 
-## 技術堆疊
+## æŠ€è¡“å †ç–Š
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
+![Gemini Agent](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Bubble Tea](https://img.shields.io/badge/Bubble_Tea-FF75B5?style=flat&logo=go&logoColor=white)
 
-- **代理**：Claude Code，附自訂技能與模式
-- **PDF**：Playwright/Puppeteer + HTML 範本
-- **掃描器**：Playwright + Greenhouse API + WebSearch
-- **儀表板**：Go + Bubble Tea + Lipgloss（Catppuccin Mocha 主題）
-- **資料**：Markdown 表格 + YAML 設定 + TSV 批次檔案
+- **ä»£ç†**ï¼šGemini Agentï¼Œé™„è‡ªè¨‚æŠ€èƒ½èˆ‡æ¨¡å¼
+- **PDF**ï¼šPlaywright/Puppeteer + HTML ç¯„æœ¬
+- **æŽƒæå™¨**ï¼šPlaywright + Greenhouse API + WebSearch
+- **å„€è¡¨æ¿**ï¼šGo + Bubble Tea + Lipglossï¼ˆCatppuccin Mocha ä¸»é¡Œï¼‰
+- **è³‡æ–™**ï¼šMarkdown è¡¨æ ¼ + YAML è¨­å®š + TSV æ‰¹æ¬¡æª”æ¡ˆ
 
-## 同樣開源
+## åŒæ¨£é–‹æº
 
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** — 作者的作品集網站（santifer.io），包含 AI 聊天機器人、LLMOps 儀表板與案例研究。如果你需要一個在求職過程中展示的作品集，可以 fork 它並改造成你自己的。
+- **[cv-santiago](https://github.com/santifer/cv-santiago)** â€” ä½œè€…çš„ä½œå“é›†ç¶²ç«™ï¼ˆsantifer.ioï¼‰ï¼ŒåŒ…å« AI èŠå¤©æ©Ÿå™¨äººã€LLMOps å„€è¡¨æ¿èˆ‡æ¡ˆä¾‹ç ”ç©¶ã€‚å¦‚æžœä½ éœ€è¦ä¸€å€‹åœ¨æ±‚è·éŽç¨‹ä¸­å±•ç¤ºçš„ä½œå“é›†ï¼Œå¯ä»¥ fork å®ƒä¸¦æ”¹é€ æˆä½ è‡ªå·±çš„ã€‚
 
-## 關於作者
+## é—œæ–¼ä½œè€…
 
-我是 Santiago — Head of Applied AI，前創業者（創建並出售了一家至今仍以我名字營運的公司）。我打造 career-ops 是為了管理自己的求職過程，並成功用它找到了現在這份工作。
+æˆ‘æ˜¯ Santiago â€” Head of Applied AIï¼Œå‰å‰µæ¥­è€…ï¼ˆå‰µå»ºä¸¦å‡ºå”®äº†ä¸€å®¶è‡³ä»Šä»ä»¥æˆ‘åå­—ç‡Ÿé‹çš„å…¬å¸ï¼‰ã€‚æˆ‘æ‰“é€  career-ops æ˜¯ç‚ºäº†ç®¡ç†è‡ªå·±çš„æ±‚è·éŽç¨‹ï¼Œä¸¦æˆåŠŸç”¨å®ƒæ‰¾åˆ°äº†ç¾åœ¨é€™ä»½å·¥ä½œã€‚
 
-個人作品集與其他開源專案 → [santifer.io](https://santifer.io)
+å€‹äººä½œå“é›†èˆ‡å…¶ä»–é–‹æºå°ˆæ¡ˆ â†’ [santifer.io](https://santifer.io)
 
-☕ 如果 career-ops 對你的求職有所幫助，歡迎[請我喝杯咖啡](https://buymeacoffee.com/santifer)。
+â˜• å¦‚æžœ career-ops å°ä½ çš„æ±‚è·æœ‰æ‰€å¹«åŠ©ï¼Œæ­¡è¿Ž[è«‹æˆ‘å–æ¯å’–å•¡](https://buymeacoffee.com/santifer)ã€‚
 
-## Star 歷史
+## Star æ­·å²
 
 <a href="https://www.star-history.com/?repos=santifer%2Fcareer-ops&type=timeline&legend=top-left">
  <picture>
@@ -248,30 +250,30 @@ career-ops/
  </picture>
 </a>
 
-## 免責聲明
+## å…è²¬è²æ˜Ž
 
-**career-ops 是一個本地端開源工具 — 並非託管服務。** 使用本軟體即表示你確認：
+**career-ops æ˜¯ä¸€å€‹æœ¬åœ°ç«¯é–‹æºå·¥å…· â€” ä¸¦éžè¨—ç®¡æœå‹™ã€‚** ä½¿ç”¨æœ¬è»Ÿé«”å³è¡¨ç¤ºä½ ç¢ºèªï¼š
 
-1. **你掌控自己的資料。** 你的履歷、聯絡資訊和個人資料僅儲存於你的裝置上，並直接傳送至你所選擇的 AI 服務供應商（Anthropic、OpenAI 等）。我們不會收集、儲存或存取你的任何資料。
-2. **你掌控 AI。** 預設提示詞已指示 AI 不要自動送出應徵，但 AI 模型的行為可能無法預測。如果你修改提示詞或使用不同的模型，風險由你自行承擔。**送出前務必確認 AI 生成內容的正確性。**
-3. **你須遵守第三方服務條款。** 你必須依據你所操作的求職平台（Greenhouse、Lever、Workday、LinkedIn 等）的服務條款使用本工具。請勿使用本工具向雇主發送垃圾訊息或對 ATS 系統造成過多負擔。
-4. **不提供任何保證。** 評估結果僅為建議，並非事實。AI 模型可能會產生幻覺，錯誤描述技能或經歷。作者對於任何就業結果、應徵被拒、帳號限制或其他後果概不負責。
+1. **ä½ æŽŒæŽ§è‡ªå·±çš„è³‡æ–™ã€‚** ä½ çš„å±¥æ­·ã€è¯çµ¡è³‡è¨Šå’Œå€‹äººè³‡æ–™åƒ…å„²å­˜æ–¼ä½ çš„è£ç½®ä¸Šï¼Œä¸¦ç›´æŽ¥å‚³é€è‡³ä½ æ‰€é¸æ“‡çš„ AI æœå‹™ä¾›æ‡‰å•†ï¼ˆAnthropicã€OpenAI ç­‰ï¼‰ã€‚æˆ‘å€‘ä¸æœƒæ”¶é›†ã€å„²å­˜æˆ–å­˜å–ä½ çš„ä»»ä½•è³‡æ–™ã€‚
+2. **ä½ æŽŒæŽ§ AIã€‚** é è¨­æç¤ºè©žå·²æŒ‡ç¤º AI ä¸è¦è‡ªå‹•é€å‡ºæ‡‰å¾µï¼Œä½† AI æ¨¡åž‹çš„è¡Œç‚ºå¯èƒ½ç„¡æ³•é æ¸¬ã€‚å¦‚æžœä½ ä¿®æ”¹æç¤ºè©žæˆ–ä½¿ç”¨ä¸åŒçš„æ¨¡åž‹ï¼Œé¢¨éšªç”±ä½ è‡ªè¡Œæ‰¿æ“”ã€‚**é€å‡ºå‰å‹™å¿…ç¢ºèª AI ç”Ÿæˆå…§å®¹çš„æ­£ç¢ºæ€§ã€‚**
+3. **ä½ é ˆéµå®ˆç¬¬ä¸‰æ–¹æœå‹™æ¢æ¬¾ã€‚** ä½ å¿…é ˆä¾æ“šä½ æ‰€æ“ä½œçš„æ±‚è·å¹³å°ï¼ˆGreenhouseã€Leverã€Workdayã€LinkedIn ç­‰ï¼‰çš„æœå‹™æ¢æ¬¾ä½¿ç”¨æœ¬å·¥å…·ã€‚è«‹å‹¿ä½¿ç”¨æœ¬å·¥å…·å‘é›‡ä¸»ç™¼é€åžƒåœ¾è¨Šæ¯æˆ–å° ATS ç³»çµ±é€ æˆéŽå¤šè² æ“”ã€‚
+4. **ä¸æä¾›ä»»ä½•ä¿è­‰ã€‚** è©•ä¼°çµæžœåƒ…ç‚ºå»ºè­°ï¼Œä¸¦éžäº‹å¯¦ã€‚AI æ¨¡åž‹å¯èƒ½æœƒç”¢ç”Ÿå¹»è¦ºï¼ŒéŒ¯èª¤æè¿°æŠ€èƒ½æˆ–ç¶“æ­·ã€‚ä½œè€…å°æ–¼ä»»ä½•å°±æ¥­çµæžœã€æ‡‰å¾µè¢«æ‹’ã€å¸³è™Ÿé™åˆ¶æˆ–å…¶ä»–å¾Œæžœæ¦‚ä¸è² è²¬ã€‚
 
-詳細內容請參閱 [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md)。本軟體依 [MIT 授權條款](LICENSE) 以「現狀」提供，不附帶任何形式的保證。
+è©³ç´°å…§å®¹è«‹åƒé–± [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md)ã€‚æœ¬è»Ÿé«”ä¾ [MIT æŽˆæ¬Šæ¢æ¬¾](LICENSE) ä»¥ã€Œç¾ç‹€ã€æä¾›ï¼Œä¸é™„å¸¶ä»»ä½•å½¢å¼çš„ä¿è­‰ã€‚
 
-## 貢獻者
+## è²¢ç»è€…
 
 <a href="https://github.com/santifer/career-ops/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=santifer/career-ops" />
 </a>
 
-使用 career-ops 找到工作了嗎？[分享你的故事！](https://github.com/santifer/career-ops/issues/new?template=i-got-hired.yml)
+ä½¿ç”¨ career-ops æ‰¾åˆ°å·¥ä½œäº†å—Žï¼Ÿ[åˆ†äº«ä½ çš„æ•…äº‹ï¼](https://github.com/santifer/career-ops/issues/new?template=i-got-hired.yml)
 
-## 授權條款
+## æŽˆæ¬Šæ¢æ¬¾
 
 MIT
 
-## 聯絡我
+## è¯çµ¡æˆ‘
 
 [![Website](https://img.shields.io/badge/santifer.io-000?style=for-the-badge&logo=safari&logoColor=white)](https://santifer.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santifer)
@@ -279,3 +281,4 @@ MIT
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8pRpHETxa4)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hi@santifer.io)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/santifer)
+

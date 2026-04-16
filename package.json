@@ -1,7 +1,7 @@
 {
-  "name": "career-ops",
+  "name": "gemini-career-ops",
   "version": "1.0.0",
-  "description": "AI-powered job search pipeline built on Claude Code",
+  "description": "AI-powered job search pipeline adapted for Gemini (Forked from Career-Ops)",
   "scripts": {
     "doctor": "node doctor.mjs",
     "verify": "node verify-pipeline.mjs",
@@ -14,7 +14,8 @@
     "update": "node update-system.mjs apply",
     "rollback": "node update-system.mjs rollback",
     "liveness": "node check-liveness.mjs",
-    "scan": "node scan.mjs"
+    "scan": "node scan.mjs",
+    "gemini-ops": "node gemini-ops.mjs"
   },
   "keywords": [
     "ai",
@@ -31,6 +32,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@google/genai": "^1.50.1",
+    "dotenv": "^17.4.2",
     "js-yaml": "^4.1.1",
     "playwright": "^1.58.1"
   }

@@ -1,9 +1,11 @@
-# Career-Ops
+﻿> **Note: This is a Gemini-adapted fork.**
+> The original "Career-Ops" system was created by **Santiago Fernández de Valderrama ([santifer.io](https://santifer.io))**. All credit for the framework, prompts, and pipeline design goes to him. You can find the original repository here: [santifer/career-ops](https://github.com/santifer/career-ops).
+# Gemini Career-Ops
 
-[English](README.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [한국어](README.ko-KR.md) | [日本語](README.ja.md) | [Русский](README.ru.md) | [繁體中文](README.zh-TW.md)
+[English](README.md) | [EspaÃ±ol](README.es.md) | [PortuguÃªs (Brasil)](README.pt-BR.md) | [í•œêµ­ì–´](README.ko-KR.md) | [æ—¥æœ¬èªž](README.ja.md) | [Ð ÑƒÑÑÐºÐ¸Ð¹](README.ru.md) | [ç¹é«”ä¸­æ–‡](README.zh-TW.md)
 
 <p align="center">
-  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops — Multi-Agent Job Search System" width="800"></a>
+  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops â€” Multi-Agent Job Search System" width="800"></a>
 </p>
 
 <p align="center">
@@ -13,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
+  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Gemini Agent">
   <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
   <img src="https://img.shields.io/badge/Codex_(soon)-6B7280?style=flat&logo=openai&logoColor=white" alt="Codex">
   <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
@@ -38,7 +40,7 @@
   <img src="docs/demo.gif" alt="Career-Ops Demo" width="800">
 </p>
 
-<p align="center"><strong>740+ job listings evaluated · 100+ personalized CVs · 1 dream role landed</strong></p>
+<p align="center"><strong>740+ job listings evaluated Â· 100+ personalized CVs Â· 1 dream role landed</strong></p>
 
 <p align="center"><a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Join_the_community-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a></p>
 
@@ -54,7 +56,7 @@ Career-Ops turns any AI coding CLI into a full job search command center. Instea
 
 > **Important: This is NOT a spray-and-pray tool.** Career-ops is a filter -- it helps you find the few offers worth your time out of hundreds. The system strongly recommends against applying to anything scoring below 4.0/5. Your time is valuable, and so is the recruiter's. Always review before submitting.
 
-Career-ops is agentic: Claude Code navigates career pages with Playwright, evaluates fit by reasoning about your CV vs the job description (not keyword matching), and adapts your resume per listing.
+Career-ops is agentic: Gemini Agent navigates career pages with Playwright, evaluates fit by reasoning about your CV vs the job description (not keyword matching), and adapts your resume per listing.
 
 > **Heads up: the first evaluations won't be great.** The system doesn't know you yet. Feed it context -- your CV, your career story, your proof points, your preferences, what you're good at, what you want to avoid. The more you nurture it, the better it gets. Think of it as onboarding a new recruiter: the first week they need to learn about you, then they become invaluable.
 
@@ -70,7 +72,7 @@ Built by someone who used it to evaluate 740+ job offers, generate 100+ tailored
 | **Negotiation Scripts** | Salary negotiation frameworks, geographic discount pushback, competing offer leverage |
 | **ATS PDF Generation** | Keyword-injected CVs with Space Grotesk + DM Sans design |
 | **Portal Scanner** | 45+ companies pre-configured (Anthropic, OpenAI, ElevenLabs, Retool, n8n...) + custom queries across Ashby, Greenhouse, Lever, Wellfound |
-| **Batch Processing** | Parallel evaluation with `claude -p` workers |
+| **Batch Processing** | Parallel evaluation with `npm run gemini-ops --` workers |
 | **Dashboard TUI** | Terminal UI to browse, filter, and sort your pipeline |
 | **Human-in-the-Loop** | AI evaluates and recommends, you decide and act. The system never submits an application -- you always have the final call |
 | **Pipeline Integrity** | Automated merge, dedup, status normalization, health checks |
@@ -94,7 +96,7 @@ cp templates/portals.example.yml portals.yml       # Customize companies
 # Create cv.md in the project root with your CV in markdown
 
 # 5. Personalize with Claude
-claude   # Open Claude Code in this directory
+claude   # Open Gemini Agent in this directory
 
 # Then ask Claude to adapt the system to you:
 # "Change the archetypes to backend engineering roles"
@@ -115,18 +117,18 @@ See [docs/SETUP.md](docs/SETUP.md) for the full setup guide.
 Career-ops is a single slash command with multiple modes:
 
 ```
-/career-ops                → Show all available commands
-/career-ops {paste a JD}   → Full auto-pipeline (evaluate + PDF + tracker)
-/career-ops scan           → Scan portals for new offers
-/career-ops pdf            → Generate ATS-optimized CV
-/career-ops batch          → Batch evaluate multiple offers
-/career-ops tracker        → View application status
-/career-ops apply          → Fill application forms with AI
-/career-ops pipeline       → Process pending URLs
-/career-ops contacto       → LinkedIn outreach message
-/career-ops deep           → Deep company research
-/career-ops training       → Evaluate a course/cert
-/career-ops project        → Evaluate a portfolio project
+/career-ops                â†’ Show all available commands
+/career-ops {paste a JD}   â†’ Full auto-pipeline (evaluate + PDF + tracker)
+/career-ops scan           â†’ Scan portals for new offers
+/career-ops pdf            â†’ Generate ATS-optimized CV
+/career-ops batch          â†’ Batch evaluate multiple offers
+/career-ops tracker        â†’ View application status
+/career-ops apply          â†’ Fill application forms with AI
+/career-ops pipeline       â†’ Process pending URLs
+/career-ops contacto       â†’ LinkedIn outreach message
+/career-ops deep           â†’ Deep company research
+/career-ops training       â†’ Evaluate a course/cert
+/career-ops project        â†’ Evaluate a portfolio project
 ```
 
 Or just paste a job URL or description directly -- career-ops auto-detects it and runs the full pipeline.
@@ -135,20 +137,20 @@ Or just paste a job URL or description directly -- career-ops auto-detects it an
 
 ```
 You paste a job URL or description
-        │
-        ▼
-┌──────────────────┐
-│  Archetype       │  Classifies: LLMOps / Agentic / PM / SA / FDE / Transformation
-│  Detection       │
-└────────┬─────────┘
-         │
-┌────────▼─────────┐
-│  A-F Evaluation  │  Match, gaps, comp research, STAR stories
-│  (reads cv.md)   │
-└────────┬─────────┘
-         │
-    ┌────┼────┐
-    ▼    ▼    ▼
+        â”‚
+        â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  Archetype       â”‚  Classifies: LLMOps / Agentic / PM / SA / FDE / Transformation
+â”‚  Detection       â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+         â”‚
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  A-F Evaluation  â”‚  Match, gaps, comp research, STAR stories
+â”‚  (reads cv.md)   â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+         â”‚
+    â”Œâ”€â”€â”€â”€â”¼â”€â”€â”€â”€â”
+    â–¼    â–¼    â–¼
  Report  PDF  Tracker
   .md   .pdf   .tsv
 ```
@@ -184,43 +186,43 @@ Features: 6 filter tabs, 4 sort modes, grouped/flat view, lazy-loaded previews, 
 
 ```
 career-ops/
-├── CLAUDE.md                    # Agent instructions
-├── cv.md                        # Your CV (create this)
-├── article-digest.md            # Your proof points (optional)
-├── config/
-│   └── profile.example.yml      # Template for your profile
-├── modes/                       # 14 skill modes
-│   ├── _shared.md               # Shared context (customize this)
-│   ├── oferta.md                # Single evaluation
-│   ├── pdf.md                   # PDF generation
-│   ├── scan.md                  # Portal scanner
-│   ├── batch.md                 # Batch processing
-│   └── ...
-├── templates/
-│   ├── cv-template.html         # ATS-optimized CV template
-│   ├── portals.example.yml      # Scanner config template
-│   └── states.yml               # Canonical statuses
-├── batch/
-│   ├── batch-prompt.md          # Self-contained worker prompt
-│   └── batch-runner.sh          # Orchestrator script
-├── dashboard/                   # Go TUI pipeline viewer
-├── data/                        # Your tracking data (gitignored)
-├── reports/                     # Evaluation reports (gitignored)
-├── output/                      # Generated PDFs (gitignored)
-├── fonts/                       # Space Grotesk + DM Sans
-├── docs/                        # Setup, customization, architecture
-└── examples/                    # Sample CV, report, proof points
+â”œâ”€â”€ CLAUDE.md                    # Agent instructions
+â”œâ”€â”€ cv.md                        # Your CV (create this)
+â”œâ”€â”€ article-digest.md            # Your proof points (optional)
+â”œâ”€â”€ config/
+â”‚   â””â”€â”€ profile.example.yml      # Template for your profile
+â”œâ”€â”€ modes/                       # 14 skill modes
+â”‚   â”œâ”€â”€ _shared.md               # Shared context (customize this)
+â”‚   â”œâ”€â”€ oferta.md                # Single evaluation
+â”‚   â”œâ”€â”€ pdf.md                   # PDF generation
+â”‚   â”œâ”€â”€ scan.md                  # Portal scanner
+â”‚   â”œâ”€â”€ batch.md                 # Batch processing
+â”‚   â””â”€â”€ ...
+â”œâ”€â”€ templates/
+â”‚   â”œâ”€â”€ cv-template.html         # ATS-optimized CV template
+â”‚   â”œâ”€â”€ portals.example.yml      # Scanner config template
+â”‚   â””â”€â”€ states.yml               # Canonical statuses
+â”œâ”€â”€ batch/
+â”‚   â”œâ”€â”€ batch-prompt.md          # Self-contained worker prompt
+â”‚   â””â”€â”€ batch-runner.sh          # Orchestrator script
+â”œâ”€â”€ dashboard/                   # Go TUI pipeline viewer
+â”œâ”€â”€ data/                        # Your tracking data (gitignored)
+â”œâ”€â”€ reports/                     # Evaluation reports (gitignored)
+â”œâ”€â”€ output/                      # Generated PDFs (gitignored)
+â”œâ”€â”€ fonts/                       # Space Grotesk + DM Sans
+â”œâ”€â”€ docs/                        # Setup, customization, architecture
+â””â”€â”€ examples/                    # Sample CV, report, proof points
 ```
 
 ## Tech Stack
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
+![Gemini Agent](https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Bubble Tea](https://img.shields.io/badge/Bubble_Tea-FF75B5?style=flat&logo=go&logoColor=white)
 
-- **Agent**: Claude Code with custom skills and modes
+- **Agent**: Gemini Agent with custom skills and modes
 - **PDF**: Playwright/Puppeteer + HTML template
 - **Scanner**: Playwright + Greenhouse API + WebSearch
 - **Dashboard**: Go + Bubble Tea + Lipgloss (Catppuccin Mocha theme)
@@ -234,9 +236,9 @@ career-ops/
 
 I'm Santiago -- Head of Applied AI, former founder (built and sold a business that still runs with my name on it). I built career-ops to manage my own job search. It worked: I used it to land my current role.
 
-My portfolio and other open source projects → [santifer.io](https://santifer.io)
+My portfolio and other open source projects â†’ [santifer.io](https://santifer.io)
 
-☕ [Buy me a coffee](https://buymeacoffee.com/santifer) if career-ops helped your job search.
+â˜• [Buy me a coffee](https://buymeacoffee.com/santifer) if career-ops helped your job search.
 
 ## Star History
 
@@ -250,7 +252,7 @@ My portfolio and other open source projects → [santifer.io](https://santifer.i
 
 ## Disclaimer
 
-**career-ops is a local, open-source tool — NOT a hosted service.** By using this software, you acknowledge:
+**career-ops is a local, open-source tool â€” NOT a hosted service.** By using this software, you acknowledge:
 
 1. **You control your data.** Your CV, contact info, and personal data stay on your machine and are sent directly to the AI provider you choose (Anthropic, OpenAI, etc.). We do not collect, store, or have access to any of your data.
 2. **You control the AI.** The default prompts instruct the AI not to auto-submit applications, but AI models can behave unpredictably. If you modify the prompts or use different models, you do so at your own risk. **Always review AI-generated content for accuracy before submitting.**
@@ -279,3 +281,4 @@ MIT
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8pRpHETxa4)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hi@santifer.io)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/santifer)
+
